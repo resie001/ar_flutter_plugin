@@ -171,7 +171,7 @@ class ArModelBuilder: NSObject {
                             let scene = try sceneSource.scene()
 
                             for child in scene.rootNode.childNodes {
-                                child.scale = SCNVector3(0.01,0.01,0.01) // Compensate for the different model dimension definitions in iOS and Android (meters vs. millimeters)
+                                child.scale = SCNVector3(1.0,1.0,1.0) // Compensate for the different model dimension definitions in iOS and Android (meters vs. millimeters)
                                 //child.eulerAngles.z = -.pi // Compensate for the different model coordinate definitions in iOS and Android
                                 //child.eulerAngles.y = -.pi // Compensate for the different model coordinate definitions in iOS and Android
                                 node?.addChildNode(child)
